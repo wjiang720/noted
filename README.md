@@ -4,7 +4,7 @@ This repository contains a simple event correlation utility for Datadog events.
 
 ## Usage
 
-Set the `DATADOG_API_KEY` and `DATADOG_APP_KEY` environment variables then run:
+Set the `DD_API_KEY` and `DD_APP_KEY` environment variables then run:
 
 ```bash
 python3 -m src.correlate
