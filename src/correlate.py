@@ -8,8 +8,10 @@ DATADOG_EVENTS_API = "https://api.datadoghq.com/api/v1/events"  # latest events 
 
 def fetch_events(start, end, api_key=None, app_key=None, query=None, limit=100):
     """Fetch events from Datadog between start and end UNIX timestamps."""
+
     api_key = api_key or os.environ.get("DD_API_KEY")
     app_key = app_key or os.environ.get("DD_APP_KEY")
+    
     if not api_key or not app_key:
         raise ValueError("API and application keys must be provided via args or env vars")
     params = {
